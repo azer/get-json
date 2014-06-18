@@ -1,17 +1,4 @@
-var request = require("request");
+var isNode = require('is-node');
+var nodeRequire = require;
 
-module.exports = getJSON;
-
-function getJSON(url, callback){
-
-  request({ url: url, json: true }, function(error, response, body){
-
-    if(error) return callback(error);
-
-    if(response.statusCode == 200) {
-      callback(undefined, body);
-    }
-
-  });
-
-}
+module.exports = isNode ? nodeRequire('./lib/node') : require('./lib/browser');

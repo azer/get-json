@@ -1,6 +1,6 @@
 ## get-json
 
-Request wrapper for fetching JSON by default. Eleminates `response` parameter.
+Cross-platform library for getting JSON documents. Wraps [request](http://npmjs.org/request) on Node, fallsback to [JSONP](http://github.com/webmodules/jsonp) on browsers.
 
 ```bash
 $ npm install get-json
@@ -9,14 +9,21 @@ $ npm install get-json
 ## Usage
 
 ```js
-getJSON = require('get-json')
+var getJSON = require('get-json')
 
-getJSON('http://multiplayerchess.com/api', function(error, response){
+getJSON('http://api.listenparadise.org', function(error, response){
+
+    error
+    // undefined
+
+    response.result
+    // ["Beth Orton &mdash; Stolen Car",
+    // "Jack White &mdash; Temporary Ground",
+    // "I Am Kloot &mdash; Loch",
+    // "Portishead &mdash; Glory Box"]
 
     response.ok
     // => true
 
 })
 ```
-
-![](https://dl.dropbox.com/s/9q2p5mrqnajys22/npmel.jpg?token_hash=AAHqttN9DiGl63ma8KRw-G0cdalaiMzrvrOPGnOfDslDjw)

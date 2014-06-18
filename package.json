@@ -1,19 +1,21 @@
 {
   "name": "get-json",
   "version": "0.0.0",
-  "description": "Request wrapper returns only error and JSON body",
+  "description": "Cross-platform library for getting JSON docs",
   "main": "index.js",
   "scripts": {
-    "test": "fox"
+    "test": "node test"
   },
   "dependencies": {
-    "request": "*"
+    "request": "*",
+    "is-node": "0.0.0",
+    "jsonp": "0.0.4"
   },
   "devDependencies": {
-    "fox": "*"
+    "prova": "*"
   },
   "repository": {
-    "url": "git@github.com:azer\/get-json.git",
+    "url": "git@github.com:azer/get-json.git",
     "type": "git"
   },
   "author": "azer",
