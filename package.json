@@ -12,7 +12,7 @@
     "jsonp": "0.0.4"
   },
   "devDependencies": {
-    "prova": "*"
+    "prova": "azer/prova"
   },
   "repository": {
     "url": "git@github.com:azer/get-json.git",
